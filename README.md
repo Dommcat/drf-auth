@@ -46,11 +46,11 @@ Need to set up .env file in project folder for Django secret key.  See .env.samp
 - Run migrations on initial startup of docker
 - `docker compose run web python manage.py migrate`
 
-- Create your superuser (for testing recommend using: Username: admin1 : email: admin1@admin.com : password: 1234)
+- Create your superuser (testing use: Username: adminx : email: adminx@admin.com : password: 1234)
 - `docker compose run web python manage.py createsuperuser`
 
 - To check authentication status
-- `http get http://127.0.0.1:8000/api/v1/drummer_app/
+- `http get http://127.0.0.1:8000/api/v1/drummer_app/`
 
 - To get token
 - `http post localhost:8000/api/token/ username=admin1 password=1234`
