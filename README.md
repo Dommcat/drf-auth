@@ -38,13 +38,16 @@ Need to set up .env file in project folder for Django secret key.  See .env.samp
 
 Routes:
 
+- To check authentication status `http get http://127.0.0.1:8000/api/v1/drummer_app/`
+
 - Get a token: http post localhost:8000/api/token/ username=admin password=YOUR_PASSWORD
 
 - Refresh token: http post localhost:8000/api/refresh/ refresh=REFRESH_TOKEN_HERE
 
-- Roster list: http localhost:8000/api/v1/app/ "Authorization: Bearer ACCESS_TOKEN_HERE"
+<!-- - Roster list: http localhost:8000/api/v1/app/ "Authorization: Bearer ACCESS_TOKEN_HERE"
 
-- Roster detail: http localhost:8000/api/v1/app/{pk} "Authorization: Bearer ACCESS_TOKEN_HERE"
+- Roster detail: http localhost:8000/api/v1/app/{pk} "Authorization: Bearer ACCESS_TOKEN_HERE" -->
+
 - Admin: `http://127.0.0.1:8000/admin`
 
 - CRUD endpoint route: `api/v1/drummer_app/`
