@@ -31,7 +31,27 @@ Need to set up .env file in project folder for Django secret key.  See .env.samp
 
 # Initialize/run your application
 
-- Set up your virtual environment
+- Build docker container: docker compose up --build
+- With docker running: docker compose run web python manage.py migrate
+- With docker running: docker compose run web python manage.py createsuperuser
+
+
+Routes:
+
+- Get a token: http post localhost:8000/api/token/ username=admin password=YOUR_PASSWORD
+
+- Refresh token: http post localhost:8000/api/refresh/ refresh=REFRESH_TOKEN_HERE
+
+- Roster list: http localhost:8000/api/v1/app/ "Authorization: Bearer ACCESS_TOKEN_HERE"
+
+- Roster detail: http localhost:8000/api/v1/app/{pk} "Authorization: Bearer ACCESS_TOKEN_HERE"
+- Admin: `http://127.0.0.1:8000/admin`
+
+- CRUD endpoint route: `api/v1/drummer_app/`
+
+
+
+<!-- - Set up your virtual environment
 - `python3 -m venv .venv`
 
 - Enter your virtual environment
@@ -59,9 +79,12 @@ Need to set up .env file in project folder for Django secret key.  See .env.samp
 - `http://127.0.0.1:8000/api/v1/drummer_app/ 'Authorization: Bearer pasteAccessTokenOverThisString'`
 
 - CRUD endpoint route:
-- `api/v1/drummer_app/`
+- `api/v1/drummer_app/` -->
+
+
+<!-- 
 
 # Tests
 
-N/A
+N/A -->
 
