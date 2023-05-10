@@ -29,7 +29,7 @@ docker compose up --build
 
 Need to set up .env file in project folder for Django secret key.  See .env.sample
 
-# Initialize/run your application
+## Initialize/run your application
 
 - Build docker container: docker compose up --build
 - With docker running: docker compose run web python manage.py migrate
