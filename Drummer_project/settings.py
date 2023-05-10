@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'whitenoise',
     'accounts',
     'Drummer_app',
@@ -159,3 +160,4 @@ REST_FRAMEWORK = {
 
 
 AUTH_USER_MODEL = "accounts.CustomUser"
+
